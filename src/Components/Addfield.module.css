@@ -1,0 +1,32 @@
+
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  displayc: block;
+  margin-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+button {
+  background-color:skyblue;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border: 1px solid black;
+  margin:10px
+}
+
+button:hover {
+  background-color: blue;
+}
+
