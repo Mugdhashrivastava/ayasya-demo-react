@@ -1,4 +1,4 @@
-/* Apply a reset to remove default browser styles */
+/* Apply a reset to remove default browser styles
 * {
   box-sizing: border-box;
   margin: 0;
@@ -62,8 +62,8 @@ button:hover {
 }
 
 /* Add a responsive design for smaller screens */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .userform {
     max-width: 100%;
   }
-}
+} */

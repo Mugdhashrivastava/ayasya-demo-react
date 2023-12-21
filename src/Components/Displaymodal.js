@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import styles from './Displaymodal.module.css'
+
 
 export default function DisplayModal({ values }) {
 
@@ -18,10 +18,10 @@ export default function DisplayModal({ values }) {
     return (
         <>
             {values.map((element, index) => (
-                <div key={index} className={styles.customcontainer} onChange={(event) => (checkHandler(event.target.value))}>
-                    <input type='checkbox' className={styles.customcheckbox} />
-                    <h6 className={styles.customtitle}>{element.title}</h6>
-                    <div className={styles.custombody}>{element.body}</div>
+                <div class="flex items-center m-4" key={index}  onChange={(event) => (checkHandler(event.target.value))}>
+                    <input type='checkbox' className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+                    <div>{element.title}</div>
+                    <div>{element.body}</div>
                 </div>
             ))}
         </>
