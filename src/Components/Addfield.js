@@ -119,16 +119,17 @@ const Addfield = () => {
   return (
     <>
       <div>
-        <form onSubmit={(e) => addHandler(e)} class="w-3/4 mx-auto">
+        <form onSubmit={(e) => addHandler(e)} class="flex flex-col items-center">
           <label
             htmlFor="title"
-            className=" w-full text-sm font-medium text-gray-900 dark:text-black "
+            className=" text-md font-medium text-gray-900 -ml-[25rem] dark:text-black "
           >
             Title
           </label>
           <input
-            className="bg-zinc-400 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/3  p-2 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-gray-500 dark:focus:border-black-500"
-            type="text"
+            
+            className="bg-zinc-200 border mb-5 border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/3 p-2 dark:border-gray-300 dark:placeholder-gray-500 dark:focus:ring-gray-500 dark:focus:border-black-500"
+           type="text"
             placeholder="Add Title"
             name="title"
             value={enteredValues.title}
@@ -138,12 +139,12 @@ const Addfield = () => {
           />
           <label
             htmlFor="body"
-            className="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+            className=" -ml-[25rem] text-md font-medium text-gray-900 dark:text-black"
           >
             Body
           </label>
           <input
-            className="bg-zinc-400 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/3 h-40 p-2 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-gray-500 dark:focus:border-black-500"
+            className="bg-zinc-200 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/3 h-40 p-2 dark:border-gray-300 dark:placeholder-gray-500 dark:focus:ring-gray-500 dark:focus:border-black-500"
             type="text"
             placeholder="Body"
             name="body"
@@ -152,33 +153,31 @@ const Addfield = () => {
           />
           <button
             type="submit"
-            className="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-6 py-1 text-center m-5 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
+            className="text-white bg-purple-500 hover:bg-purple-500 font-medium rounded-md text-sm px-6 py-1 text-center m-5 dark:bg-purple-400 dark:hover:bg-purple-600 "
           >
             Add
-          </button>
+          </button> 
         </form>
         <Displaymodal values={isTrue ? localValues : storedValues} />
 
-
-
         <button
           onClick={listHandler}
-          className="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-6 py-1 text-center m-5 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
-        >
+          className="text-white ml-32 bg-purple-500 hover:bg-purple-500 font-medium rounded-md text-sm px-6 py-1 text-center m-5 dark:bg-purple-400 dark:hover:bg-purple-600 "
+          >
           List
         </button>
 
         {isTrue ? (
           <button
             onClick={deleteHandler}
-            className="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-6 py-1 text-center m-5 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
+            className="text-white bg-purple-500 hover:bg-purple-500 font-medium rounded-md text-sm px-6 py-1 text-center m-5 dark:bg-purple-400 dark:hover:bg-purple-600 "
           >
             Delete
           </button>
         ) : null}
 
         <select
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm m-5 rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm m-5 mx-auto rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-zinc-200  dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
           style={{ width: "300px" }}
           onChange={selectHandler}
         >
@@ -192,16 +191,14 @@ const Addfield = () => {
 
         <button
           onClick={openAddUserModal}
-          className="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-6 py-1 text-center m-5 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
-        >
+          className="text-white ml-32 bg-purple-500 hover:bg-purple-500 font-medium rounded-md text-sm px-6 py-1 text-center m-5 dark:bg-purple-400 dark:hover:bg-purple-600 "
+          >
           Adduser
         </button>
 
         {showAddUserModal ? (
           <Addusermodal onClose={closeAddUserModal} getState={getState} />
         ) : null}
-
-       
       </div>
     </>
   );
