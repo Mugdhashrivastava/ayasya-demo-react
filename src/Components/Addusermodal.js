@@ -5,8 +5,8 @@ export default function Addusermodal({ getState }) {
   // console.log(userList)
   const generateRandomId = () => {
     return Math.random().toString(36).substr(2, 9);
-  };Transition
-
+  };
+  
   const [addModalState, setAddModalState] = useState({
     firstname: "",
     lastname: "",
