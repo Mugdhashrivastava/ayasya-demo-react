@@ -118,7 +118,7 @@ const Addfield = () => {
 
   return (
     <>
-      <div>
+      <div >
         <form onSubmit={(e) => addHandler(e)} class="flex flex-col items-center">
           <label
             htmlFor="title"
@@ -160,6 +160,15 @@ const Addfield = () => {
         </form>
         <Displaymodal values={isTrue ? localValues : storedValues} />
 
+
+
+        <button
+          onClick={openAddUserModal}
+          className="text-white ml-32 bg-purple-500 hover:bg-purple-500 font-medium rounded-md text-sm px-6 py-1 text-center m-5 dark:bg-purple-400 dark:hover:bg-purple-600 "
+          >
+          Adduser
+        </button>
+
         <button
           onClick={listHandler}
           className="text-white ml-32 bg-purple-500 hover:bg-purple-500 font-medium rounded-md text-sm px-6 py-1 text-center m-5 dark:bg-purple-400 dark:hover:bg-purple-600 "
@@ -189,12 +198,7 @@ const Addfield = () => {
           ))}
         </select>
 
-        <button
-          onClick={openAddUserModal}
-          className="text-white ml-32 bg-purple-500 hover:bg-purple-500 font-medium rounded-md text-sm px-6 py-1 text-center m-5 dark:bg-purple-400 dark:hover:bg-purple-600 "
-          >
-          Adduser
-        </button>
+       
 
         {showAddUserModal ? (
           <Addusermodal onClose={closeAddUserModal} getState={getState} />

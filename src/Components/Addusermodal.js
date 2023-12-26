@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { startTransition, useState } from "react";
 
 export default function Addusermodal({ getState }) {
   const [userList, setUserList] = useState([]);
   // console.log(userList)
   const generateRandomId = () => {
     return Math.random().toString(36).substr(2, 9);
-  };
+  };Transition
 
   const [addModalState, setAddModalState] = useState({
     firstname: "",
